@@ -1,5 +1,189 @@
-h1 {
-  background-color: yellow;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f2ebe3;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin: 10px 10px;
+  background-color: white;
+  min-height: 95vh;
+  max-width: 920px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    min-height: 70vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.container .image {
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+}
+
+@media screen and (min-width: 769px) {
+  .container .image {
+    background-image: url("../images/image-product-desktop.jpg");
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: 70vh;
+    background-position: center;
+  }
+}
+
+.container .information {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .information__type {
+  color: #6c7289;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.container .information__header {
+  font-family: "Fraunces", serif;
+  font-size: 2.6rem;
+  color: #1c232b;
+  margin: 20px 0;
+}
+
+.container .information__paragraph {
+  color: #6c7289;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.container .information .information-bottom-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.container .information .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+}
+
+.container .information .price__current {
+  font-size: 2.6rem;
+  font-family: "Fraunces", serif;
+  color: #3c8067;
+  margin-right: 35px;
+}
+
+.container .information .price__previous {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  color: #6c7289;
+  text-decoration: line-through;
+}
+
+.container .information__button {
+  background-color: #3c8067;
+  width: 100%;
+  border: none;
+  margin-top: 20px;
+  padding: 15px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container .information__button:hover {
+  cursor: pointer;
+  background-color: #2c5e4b;
+}
+
+@media screen and (min-width: 769px) {
+  .container .information {
+    padding: 30px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .container .information__type {
+    margin-top: 10px;
+  }
 }
 
 .attribution {
